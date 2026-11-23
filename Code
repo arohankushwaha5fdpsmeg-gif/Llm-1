@@ -1,3 +1,16 @@
+import torch
+import trimesh
+import numpy as np
+import imageio
+import json
+import os
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from diffusers import StableDiffusionPipeline
+from gtts import gTTS
+from IPython.display import Audio, display
+print(" Modules loaded successfully.")
+
+
 MEMORY_FILE = "/content/brain_memory.json"
 
 def load_memory():
